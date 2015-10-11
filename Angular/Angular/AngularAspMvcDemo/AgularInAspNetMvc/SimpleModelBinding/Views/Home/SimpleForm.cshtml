@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "SimpleForm";
+}
+<h2>Simple Form</h2>
+
+<form ng-controller="FormController" ng-submit="save()">
+    First Name: <input ng-model="user.FirstName"/><br/>
+    Last Name: <input ng-model="user.LastName"/><br/>
+    Birthdate: <input ng-model="test" type="date"
+                      placeholder="yyyy-MM-dd"/><br/>
+    Pick a number between 1 and 5:<input ng-model="user.Number"
+                                         ng-change="numberChanged(user.Number)"/>
+
+    <input type="submit" id="submit" value="Add Me"/>
+</form>
+<script src="~/Scripts/3FormController.js"></script>
